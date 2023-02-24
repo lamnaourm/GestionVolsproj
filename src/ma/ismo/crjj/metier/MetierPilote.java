@@ -6,34 +6,36 @@ import ma.ismo.crjj.models.Pilote;
 
 public class MetierPilote implements IMetier<Pilote> {
 
+	IMetier<Pilote> mpilote = new MetierPilote();
+	
 	@Override
 	public List<Pilote> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return mpilote.getAll();
 	}
 
 	@Override
 	public Pilote getOne(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return mpilote.getOne(id);
 	}
 
 	@Override
 	public boolean create(Pilote obj) {
 		// TODO Auto-generated method stub
-		return false;
+		return mpilote.create(obj);
 	}
 
 	@Override
 	public boolean update(Pilote obj) {
 		// TODO Auto-generated method stub
-		return false;
+		return mpilote.update(obj);
 	}
 
 	@Override
 	public boolean delete(Pilote obj) {
 		// TODO Auto-generated method stub
-		return false;
+		return mpilote.delete(obj);
 	}
 
 	

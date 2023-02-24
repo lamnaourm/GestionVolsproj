@@ -1,6 +1,6 @@
-SET foreign_key_checks = 'ON'
+SET foreign_key_checks = 'ON';
 
-create database if not exists dbvols; ADD
+create database if not exists dbvols; 
 
 use dbvols; 
 
@@ -8,7 +8,7 @@ use dbvols;
 create table pilote (
     id int PRIMARY KEY auto_increment, 
     nom VARCHAR(45),
-    prenom VARCHAR(45),
+    prenom VARCHAR(45)
 ) ENGINE = InnoDB;
 
 -- Remplissage de la table pilote
@@ -88,14 +88,14 @@ create table vol (
     date_decollage VARCHAR(45),
     id_pilote int,
     id_avion int,
-    id_trajet int,
+    id_trajet int
 ) ENGINE = InnoDB;
 
-alter table vol add constraint fk_vol_pilote FOREIGN key (id_pilote) REFERENCES pilote(id_pilote);
+alter table vol add constraint fk_vol_pilote FOREIGN key (id_pilote) REFERENCES pilote(id);
 
-alter table vol add constraint fk_vol_avion FOREIGN key (id_avion) REFERENCES pilote(id_avion);
+alter table vol add constraint fk_vol_avion FOREIGN key (id_avion) REFERENCES avion(id);
 
-alter table vol add constraint fk_vol_trajet FOREIGN key (id_trajet) REFERENCES pilote(id_trajet);
+alter table vol add constraint fk_vol_trajet FOREIGN key (id_trajet) REFERENCES trajet(id);
 
 insert into vol values (null, '2023-02-25 04:50:00',1,1,1);
 insert into vol values (null, '2023-02-25 01:30:00',2,2,2);

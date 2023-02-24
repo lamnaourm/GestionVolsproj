@@ -79,7 +79,11 @@ public class Principale extends JFrame implements MouseListener {
 		menu.add(lblNewLabel, gbc_lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Dashboard");
+		btnNewButton.setHorizontalAlignment(SwingConstants.LEFT);
 		btnNewButton.addMouseListener(this);
+		ImageIcon image2 = new ImageIcon(getClass().getResource("/dashboard.png"));
+		btnNewButton.setIcon(image2);
+		btnNewButton.setIconTextGap(30);
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setPreferredSize(new Dimension(85, 40));
@@ -91,7 +95,11 @@ public class Principale extends JFrame implements MouseListener {
 		gbc_btnNewButton.gridy = 1;
 		menu.add(btnNewButton, gbc_btnNewButton);
 		
-		JButton btnLesPiotes = new JButton("Les piotes");
+		JButton btnLesPiotes = new JButton("Les pilotes");
+		btnLesPiotes.setHorizontalAlignment(SwingConstants.LEFT);
+		ImageIcon image3 = new ImageIcon(getClass().getResource("/pilote.png"));
+		btnLesPiotes.setIcon(image3);
+		btnLesPiotes.setIconTextGap(30);
 		btnLesPiotes.addMouseListener(this);
 		btnLesPiotes.setForeground(new Color(255, 255, 255));
 		btnLesPiotes.setBackground(new Color(0, 0, 128));
@@ -106,7 +114,7 @@ public class Principale extends JFrame implements MouseListener {
 		
 		JButton btnLesAvions = new JButton("Les avions");
 		btnLesAvions.setHorizontalAlignment(SwingConstants.LEFT);
-		btnLesAvions.setIconTextGap(70);
+		btnLesAvions.setIconTextGap(30);
 		btnLesAvions.addMouseListener(this);
 		ImageIcon image1 = new ImageIcon(getClass().getResource("/plane.png"));
 		btnLesAvions.setIcon(image1);
@@ -122,6 +130,10 @@ public class Principale extends JFrame implements MouseListener {
 		menu.add(btnLesAvions, gbc_btnLesAvions);
 		
 		JButton btnLesTrajets = new JButton("Les trajets");
+		btnLesTrajets.setHorizontalAlignment(SwingConstants.LEFT);
+		ImageIcon image4 = new ImageIcon(getClass().getResource("/trajet.png"));
+		btnLesTrajets.setIcon(image4);
+		btnLesTrajets.setIconTextGap(30);
 		btnLesTrajets.addMouseListener(this);
 		btnLesTrajets.setForeground(new Color(255, 255, 255));
 		btnLesTrajets.setBackground(new Color(0, 0, 128));
@@ -135,6 +147,10 @@ public class Principale extends JFrame implements MouseListener {
 		menu.add(btnLesTrajets, gbc_btnLesTrajets);
 		
 		JButton btnLesVols = new JButton("Les vols");
+		btnLesVols.setHorizontalAlignment(SwingConstants.LEFT);
+		ImageIcon image5 = new ImageIcon(getClass().getResource("/vol.png"));
+		btnLesVols.setIcon(image5);
+		btnLesVols.setIconTextGap(30);
 		btnLesVols.addMouseListener(this);
 		btnLesVols.setForeground(new Color(255, 255, 255));
 		btnLesVols.setBackground(new Color(0, 0, 128));
@@ -148,6 +164,10 @@ public class Principale extends JFrame implements MouseListener {
 		menu.add(btnLesVols, gbc_btnLesVols);
 		
 		JButton btnReporting = new JButton("Reporting");
+		btnReporting.setHorizontalAlignment(SwingConstants.LEFT);
+		ImageIcon image6 = new ImageIcon(getClass().getResource("/reporting.png"));
+		btnReporting.setIcon(image6);
+		btnReporting.setIconTextGap(30);
 		btnReporting.addMouseListener(this);
 		btnReporting.setForeground(new Color(255, 255, 255));
 		btnReporting.setBackground(new Color(0, 0, 128));

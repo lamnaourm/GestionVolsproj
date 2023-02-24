@@ -2,20 +2,29 @@ package ma.ismo.crjj.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import ma.ismo.crjj.models.Avion;
+import ma.ismo.crjj.utils.HibernateUtils;
 
 public class DaoAvion implements IDao<Avion> {
 
 	@Override
 	public List<Avion> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		Session s = HibernateUtils.getSessionfactory().getCurrentSession();
+		Transaction t = s.beginTransaction();
+		List<Avion> avions = s.createQuery("from Avion").getResultList();
+		t.commit();
+		s.close();
+		return avions;
 	}
 
 	@Override
 	public Avion getOne(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session s = HibernateUtils.getSessionfactory().getCurrentSession();
+		Transaction t = s.beginTransaction();
+		return s.get(Avion.class, id);
 	}
 
 	@Override
