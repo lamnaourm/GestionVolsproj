@@ -58,18 +58,18 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel menu = new JPanel();
 		menu.setBorder(new EmptyBorder(0, 10, 0, 10));
 		menu.setBackground(new Color(0, 0, 0));
 		contentPane.add(menu, BorderLayout.WEST);
 		GridBagLayout gbl_menu = new GridBagLayout();
-		gbl_menu.columnWidths = new int[] {159};
-		gbl_menu.rowHeights = new int[] {14, 10, 10, 10, 10, 10, 10, 0};
-		gbl_menu.columnWeights = new double[]{0.0};
-		gbl_menu.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_menu.columnWidths = new int[] { 159 };
+		gbl_menu.rowHeights = new int[] { 14, 10, 10, 10, 10, 10, 10, 0 };
+		gbl_menu.columnWeights = new double[] { 0.0 };
+		gbl_menu.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		menu.setLayout(gbl_menu);
-		
+
 		JLabel lblNewLabel = new JLabel();
 		lblNewLabel.setBorder(new EmptyBorder(10, 10, 10, 10));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
@@ -80,7 +80,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		ImageIcon image = new ImageIcon(getClass().getResource("/icon.jpg"));
 		lblNewLabel.setIcon(image);
 		menu.add(lblNewLabel, gbc_lblNewLabel);
-		
+
 		JButton btnNewButton = new JButton("Dashboard");
 		btnNewButton.addActionListener(this);
 		btnNewButton.setHorizontalAlignment(SwingConstants.LEFT);
@@ -98,7 +98,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnNewButton.gridx = 0;
 		gbc_btnNewButton.gridy = 1;
 		menu.add(btnNewButton, gbc_btnNewButton);
-		
+
 		JButton btnLesPiotes = new JButton("Les pilotes");
 		btnLesPiotes.addActionListener(this);
 		btnLesPiotes.setHorizontalAlignment(SwingConstants.LEFT);
@@ -116,7 +116,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesPiotes.gridx = 0;
 		gbc_btnLesPiotes.gridy = 2;
 		menu.add(btnLesPiotes, gbc_btnLesPiotes);
-		
+
 		JButton btnLesAvions = new JButton("Les avions");
 		btnLesAvions.setHorizontalAlignment(SwingConstants.LEFT);
 		btnLesAvions.setIconTextGap(30);
@@ -133,7 +133,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesAvions.gridx = 0;
 		gbc_btnLesAvions.gridy = 3;
 		menu.add(btnLesAvions, gbc_btnLesAvions);
-		
+
 		JButton btnLesTrajets = new JButton("Les trajets");
 		btnLesTrajets.setHorizontalAlignment(SwingConstants.LEFT);
 		ImageIcon image4 = new ImageIcon(getClass().getResource("/trajet.png"));
@@ -151,7 +151,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesTrajets.gridx = 0;
 		gbc_btnLesTrajets.gridy = 4;
 		menu.add(btnLesTrajets, gbc_btnLesTrajets);
-		
+
 		JButton btnLesVols = new JButton("Les vols");
 		btnLesVols.setHorizontalAlignment(SwingConstants.LEFT);
 		ImageIcon image5 = new ImageIcon(getClass().getResource("/vol.png"));
@@ -169,7 +169,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesVols.gridx = 0;
 		gbc_btnLesVols.gridy = 5;
 		menu.add(btnLesVols, gbc_btnLesVols);
-		
+
 		JButton btnReporting = new JButton("Reporting");
 		btnReporting.setHorizontalAlignment(SwingConstants.LEFT);
 		ImageIcon image6 = new ImageIcon(getClass().getResource("/reporting.png"));
@@ -186,66 +186,84 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnReporting.gridx = 0;
 		gbc_btnReporting.gridy = 6;
 		menu.add(btnReporting, gbc_btnReporting);
-		
+
 		body = new JPanel();
 		contentPane.add(body, BorderLayout.CENTER);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 0, 0));
 		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
 		flowLayout.setAlignment(FlowLayout.RIGHT);
 		contentPane.add(panel, BorderLayout.NORTH);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Gestion des vols");
 		lblNewLabel_1.setBackground(new Color(240, 240, 240));
 		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		panel.add(lblNewLabel_1);
+		body.setLayout(new BorderLayout(0, 0));
+		
+		panelDashboard panelDashboard_ = new panelDashboard();
+		body.add(panelDashboard_);
+		panelDashboard_.setLayout(null);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		JButton b = (JButton)e.getSource();
+		JButton b = (JButton) e.getSource();
 		b.setBackground(new Color(255, 128, 0));
 	}
+
 	@Override
 	public void mouseExited(MouseEvent e) {
-		JButton b = (JButton)e.getSource();
+		JButton b = (JButton) e.getSource();
 		b.setBackground(new Color(0, 0, 128));
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton b = (JButton)e.getSource();
-		
+		JButton b = (JButton) e.getSource();
+
 		body.removeAll();
-		
+
 		switch (b.getText().toLowerCase()) {
-		case "dashboard":body.add(new panelDashboard()); break;
-		case "avion": body.add(new panelAvion()); break;
-		case "pilote":body.add(new panelPilote());break;
-		case "trajet": body.add(new panelTrajet());break;
-		case "reporting":body.add(new panelReporting());break;
-		case "vol":body.add(new panelVol());break;
+		case "dashboard":
+			body.add(new panelDashboard(), BorderLayout.CENTER);
+			break;
+		case "les avions":
+			body.add(new panelAvion(), BorderLayout.CENTER);
+			break;
+		case "les pilotes":
+			body.add(new panelPilote(), BorderLayout.CENTER);
+			break;
+		case "les trajets":
+			body.add(new panelTrajet(), BorderLayout.CENTER);
+			break;
+		case "reporting":
+			body.add(new panelReporting(), BorderLayout.CENTER);
+			break;
+		case "les vols":
+			body.add(new panelVol(), BorderLayout.CENTER);
+			break;
 		}
-		
+
 	}
 }
