@@ -60,7 +60,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		contentPane.setLayout(new BorderLayout(0, 0));
 
 		JPanel menu = new JPanel();
-		menu.setBorder(new EmptyBorder(0, 10, 0, 10));
+		menu.setBorder(new EmptyBorder(0, 0, 0, 0));
 		menu.setBackground(new Color(0, 0, 0));
 		contentPane.add(menu, BorderLayout.WEST);
 		GridBagLayout gbl_menu = new GridBagLayout();
@@ -243,6 +243,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		JButton b = (JButton) e.getSource();
 
 		body.removeAll();
+		body.revalidate();
+		body.repaint();
 
 		switch (b.getText().toLowerCase()) {
 		case "dashboard":
