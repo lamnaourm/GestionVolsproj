@@ -2,11 +2,13 @@ package ma.ismo.crjj.metier;
 
 import java.util.List;
 
+import ma.ismo.crjj.dao.DaoPilote;
+import ma.ismo.crjj.dao.IDao;
 import ma.ismo.crjj.models.Pilote;
 
 public class MetierPilote implements IMetier<Pilote> {
 
-	IMetier<Pilote> mpilote = new MetierPilote();
+	IDao<Pilote> mpilote = new DaoPilote();
 	
 	@Override
 	public List<Pilote> getAll() {

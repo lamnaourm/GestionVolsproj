@@ -38,6 +38,7 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 				try {
 					Principale frame = new Principale();
 					frame.setVisible(true);
+					frame.pack();
 					frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -81,17 +82,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		lblNewLabel.setIcon(image);
 		menu.add(lblNewLabel, gbc_lblNewLabel);
 
-		JButton btnNewButton = new JButton("Dashboard");
+		MyButton btnNewButton = new MyButton("Dashboard","/dashboard.png");
 		btnNewButton.addActionListener(this);
-		btnNewButton.setHorizontalAlignment(SwingConstants.LEFT);
-		btnNewButton.addMouseListener(this);
-		ImageIcon image2 = new ImageIcon(getClass().getResource("/dashboard.png"));
-		btnNewButton.setIcon(image2);
-		btnNewButton.setIconTextGap(30);
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(0, 0, 128));
-		btnNewButton.setPreferredSize(new Dimension(85, 40));
-		btnNewButton.setFont(new Font("Verdana", Font.BOLD, 14));
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
 		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
@@ -99,17 +91,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnNewButton.gridy = 1;
 		menu.add(btnNewButton, gbc_btnNewButton);
 
-		JButton btnLesPiotes = new JButton("Les pilotes");
+		MyButton btnLesPiotes = new MyButton("Les pilotes", "/pilote.png");
 		btnLesPiotes.addActionListener(this);
-		btnLesPiotes.setHorizontalAlignment(SwingConstants.LEFT);
-		ImageIcon image3 = new ImageIcon(getClass().getResource("/pilote.png"));
-		btnLesPiotes.setIcon(image3);
-		btnLesPiotes.setIconTextGap(30);
-		btnLesPiotes.addMouseListener(this);
-		btnLesPiotes.setForeground(new Color(255, 255, 255));
-		btnLesPiotes.setBackground(new Color(0, 0, 128));
-		btnLesPiotes.setPreferredSize(new Dimension(81, 40));
-		btnLesPiotes.setFont(new Font("Verdana", Font.BOLD, 14));
 		GridBagConstraints gbc_btnLesPiotes = new GridBagConstraints();
 		gbc_btnLesPiotes.insets = new Insets(0, 0, 5, 0);
 		gbc_btnLesPiotes.fill = GridBagConstraints.HORIZONTAL;
@@ -117,16 +100,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesPiotes.gridy = 2;
 		menu.add(btnLesPiotes, gbc_btnLesPiotes);
 
-		JButton btnLesAvions = new JButton("Les avions");
-		btnLesAvions.setHorizontalAlignment(SwingConstants.LEFT);
-		btnLesAvions.setIconTextGap(30);
-		btnLesAvions.addMouseListener(this);
-		ImageIcon image1 = new ImageIcon(getClass().getResource("/plane.png"));
-		btnLesAvions.setIcon(image1);
-		btnLesAvions.setForeground(new Color(255, 255, 255));
-		btnLesAvions.setBackground(new Color(0, 0, 128));
-		btnLesAvions.setPreferredSize(new Dimension(100, 40));
-		btnLesAvions.setFont(new Font("Verdana", Font.BOLD, 14));
+		MyButton btnLesAvions = new MyButton("Les avions","/plane.png");
+		btnLesAvions.addActionListener(this);
 		GridBagConstraints gbc_btnLesAvions = new GridBagConstraints();
 		gbc_btnLesAvions.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnLesAvions.insets = new Insets(0, 0, 5, 0);
@@ -134,17 +109,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesAvions.gridy = 3;
 		menu.add(btnLesAvions, gbc_btnLesAvions);
 
-		JButton btnLesTrajets = new JButton("Les trajets");
-		btnLesTrajets.setHorizontalAlignment(SwingConstants.LEFT);
-		ImageIcon image4 = new ImageIcon(getClass().getResource("/trajet.png"));
-		btnLesTrajets.setIcon(image4);
-		btnLesTrajets.setIconTextGap(30);
-		btnLesTrajets.addMouseListener(this);
+		MyButton btnLesTrajets = new MyButton("Les trajets", "/trajet.png");
 		btnLesTrajets.addActionListener(this);
-		btnLesTrajets.setForeground(new Color(255, 255, 255));
-		btnLesTrajets.setBackground(new Color(0, 0, 128));
-		btnLesTrajets.setPreferredSize(new Dimension(83, 40));
-		btnLesTrajets.setFont(new Font("Verdana", Font.BOLD, 14));
 		GridBagConstraints gbc_btnLesTrajets = new GridBagConstraints();
 		gbc_btnLesTrajets.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnLesTrajets.insets = new Insets(0, 0, 5, 0);
@@ -152,17 +118,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesTrajets.gridy = 4;
 		menu.add(btnLesTrajets, gbc_btnLesTrajets);
 
-		JButton btnLesVols = new JButton("Les vols");
-		btnLesVols.setHorizontalAlignment(SwingConstants.LEFT);
-		ImageIcon image5 = new ImageIcon(getClass().getResource("/vol.png"));
-		btnLesVols.setIcon(image5);
-		btnLesVols.setIconTextGap(30);
-		btnLesVols.addMouseListener(this);
+		MyButton btnLesVols = new MyButton("Les vols","/vol.png");
 		btnLesVols.addActionListener(this);
-		btnLesVols.setForeground(new Color(255, 255, 255));
-		btnLesVols.setBackground(new Color(0, 0, 128));
-		btnLesVols.setPreferredSize(new Dimension(71, 40));
-		btnLesVols.setFont(new Font("Verdana", Font.BOLD, 14));
 		GridBagConstraints gbc_btnLesVols = new GridBagConstraints();
 		gbc_btnLesVols.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnLesVols.insets = new Insets(0, 0, 5, 0);
@@ -170,17 +127,8 @@ public class Principale extends JFrame implements MouseListener, ActionListener 
 		gbc_btnLesVols.gridy = 5;
 		menu.add(btnLesVols, gbc_btnLesVols);
 
-		JButton btnReporting = new JButton("Reporting");
-		btnReporting.setHorizontalAlignment(SwingConstants.LEFT);
-		ImageIcon image6 = new ImageIcon(getClass().getResource("/reporting.png"));
-		btnReporting.setIcon(image6);
-		btnReporting.setIconTextGap(30);
-		btnReporting.addMouseListener(this);
+		MyButton btnReporting = new MyButton("Reporting", "/reporting.png");
 		btnReporting.addActionListener(this);
-		btnReporting.setForeground(new Color(255, 255, 255));
-		btnReporting.setBackground(new Color(0, 0, 128));
-		btnReporting.setPreferredSize(new Dimension(79, 40));
-		btnReporting.setFont(new Font("Verdana", Font.BOLD, 14));
 		GridBagConstraints gbc_btnReporting = new GridBagConstraints();
 		gbc_btnReporting.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnReporting.gridx = 0;
