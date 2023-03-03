@@ -2,11 +2,13 @@ package ma.ismo.crjj.metier;
 
 import java.util.List;
 
+import ma.ismo.crjj.dao.DaoAvion;
+import ma.ismo.crjj.dao.IDao;
 import ma.ismo.crjj.models.Avion;
 
 public class MetierAvion implements IMetier<Avion> {
 
-	IMetier<Avion> mavion = new MetierAvion();
+	IDao<Avion> mavion = new DaoAvion();
 	
 	@Override
 	public List<Avion> getAll() {

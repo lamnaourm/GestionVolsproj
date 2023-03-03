@@ -10,5 +10,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Diver"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HibernateLib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JfreechartLib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jasper_lib"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
